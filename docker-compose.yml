@@ -14,7 +14,7 @@ services:
      - mysql
      image: processmaker/processmaker:3.3.10
      ports:
-       - "80000:80"
+       - "60000:80"
      restart: always
      environment:
        URL: "127.0.0.1"
