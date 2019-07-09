@@ -3,9 +3,11 @@ version: '3'
 services:
    mysql:
      image: mysql:5.6
+     ports:
+       - "70000:3306"
      restart: always
      environment:
-       MYSQL_ROOT_PASSWORD: PM-DBPassw0rd
+       MYSQL_ROOT_PASSWORD: P@ssw0rd
      networks:
      - pm-net
 
@@ -14,7 +16,7 @@ services:
      - mysql
      image: processmaker/processmaker:latest
      ports:
-       - "80:80"
+       - "60000:80"
      restart: always
      networks:
       - pm-net
