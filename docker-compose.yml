@@ -6,9 +6,7 @@ services:
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: P@ssw0rd
-     networks:
-     - pm-net
-
+     
    processmaker:
      depends_on:
      - mysql
@@ -18,9 +16,7 @@ services:
      restart: always
      environment:
        URL: "127.0.0.1"
-     networks:
-      - pm-net
-
+     
 networks:
   pm-net:
     driver: bridge
