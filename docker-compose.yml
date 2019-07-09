@@ -8,9 +8,7 @@ services:
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: P@ssw0rd
-     networks:
-     - pm-net
-
+    
    processmaker:
      depends_on:
      - mysql
@@ -18,9 +16,7 @@ services:
      ports:
        - "60000:80"
      restart: always
-     networks:
-      - pm-net
-
+ 
 networks:
   pm-net:
     driver: bridge
